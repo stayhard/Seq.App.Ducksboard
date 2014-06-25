@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Seq.App.Ducksboard", "Seq.App.Ducksboard\Seq.App.Ducksboard.csproj", "{D719694C-E927-4312-9606-4C3DB3AFCFA6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Seq.App.Ducksboard.Numbers", "Seq.App.Ducksboard.Numbers\Seq.App.Ducksboard.Numbers.csproj", "{75E3B150-C691-4DFF-ACF7-C0810741CA58}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Seq.App.Ducksboard.Numbers.Tests", "Seq.App.Ducksboard.Numbers.Tests\Seq.App.Ducksboard.Numbers.Tests.csproj", "{B5C0CF62-B4C3-4A59-9ABD-4FA7FBCB76A8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D719694C-E927-4312-9606-4C3DB3AFCFA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D719694C-E927-4312-9606-4C3DB3AFCFA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D719694C-E927-4312-9606-4C3DB3AFCFA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D719694C-E927-4312-9606-4C3DB3AFCFA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75E3B150-C691-4DFF-ACF7-C0810741CA58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75E3B150-C691-4DFF-ACF7-C0810741CA58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75E3B150-C691-4DFF-ACF7-C0810741CA58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75E3B150-C691-4DFF-ACF7-C0810741CA58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5C0CF62-B4C3-4A59-9ABD-4FA7FBCB76A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5C0CF62-B4C3-4A59-9ABD-4FA7FBCB76A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5C0CF62-B4C3-4A59-9ABD-4FA7FBCB76A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5C0CF62-B4C3-4A59-9ABD-4FA7FBCB76A8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
