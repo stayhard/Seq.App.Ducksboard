@@ -22,8 +22,7 @@ namespace Seq.App.HipChat
 
         [SeqAppSetting(
             DisplayName = "Value as delta",
-            HelpText = "Whether or not the value should be regarded as a delta, that is, incrementing the existing value in Ducksboard.",
-            IsOptional = true)]
+            HelpText = "Whether or not the value should be regarded as a delta, that is, incrementing the existing value in Ducksboard. Do not process old events while updating with delta values.")]
         public bool IsDelta { get; set; }
 
         [SeqAppSetting(
@@ -39,19 +38,22 @@ namespace Seq.App.HipChat
                 return;
             }
 
-            object data = null;
+            object data;
+            var timestamp = (int)Math.Round((evt.TimestampUtc - new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc)).TotalSeconds);
             if (IsDelta)
             {
                 data = new
                 {
-                    delta = value
+                    delta = value,
+                    timestamp
                 };
             }
             else
             {
                 data = new
                 {
-                    value
+                    value,
+                    timestamp
                 };
             }
 

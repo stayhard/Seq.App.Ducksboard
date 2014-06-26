@@ -2,14 +2,14 @@
 <package >
   <metadata>
     <id>Seq.App.Ducksboard.Numbers</id>
-    <version>1.0.0</version>
+    <version>1.0.3</version>
     <authors>Stayhard</authors>
     <owners>Stayhard</owners>
     <licenseUrl>http://opensource.org/licenses/MIT</licenseUrl>
     <projectUrl>https://github.com/stayhard/Seq.App.Ducksboard</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>The Ducksboard app for Seq (http://getseq.net) pushes data from Seq into Ducksboard (http://ducksboard.com).</description>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>API requests are now including the event's timestamp, making it possible to process old events as well.</releaseNotes>
     <copyright>Copyright Stayhard AB 2014</copyright>
     <tags>seq-app seq serilog event ducksboard</tags>
     <dependencies>

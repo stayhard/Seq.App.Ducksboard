@@ -17,8 +17,6 @@ namespace Seq.App.Ducksboard
             using (var client = new HttpClient())
             {
                 client.BaseAddress = new Uri("https://push.ducksboard.com/v/");
-                //client.DefaultRequestHeaders.Accept.Clear();
-                //client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                 var byteArray = Encoding.ASCII.GetBytes(apiKey + ":");
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", Convert.ToBase64String(byteArray));
 
