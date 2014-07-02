@@ -59,9 +59,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Seq.App.Ducksboard.Numbers\Seq.App.Ducksboard.Numbers.csproj">
-      <Project>{75E3B150-C691-4DFF-ACF7-C0810741CA58}</Project>
-      <Name>Seq.App.Ducksboard.Numbers</Name>
+    <ProjectReference Include="..\Seq.App.Ducksboard\Seq.App.Ducksboard.csproj">
+      <Project>{d719694c-e927-4312-9606-4c3db3afcfa6}</Project>
+      <Name>Seq.App.Ducksboard</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

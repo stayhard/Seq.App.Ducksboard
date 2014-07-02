@@ -59,12 +59,13 @@
   <ItemGroup>
     <Compile Include="DucksboardNumbersReactor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ValueGetter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
-    <None Include="Seq.App.Ducksboard.Numbers.nuspec" />
+    <None Include="Seq.App.Ducksboard.Numbers.nuspec">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Seq.App.Ducksboard\Seq.App.Ducksboard.csproj">

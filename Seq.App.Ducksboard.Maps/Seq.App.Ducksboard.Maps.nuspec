@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>Seq.App.Ducksboard.Numbers</id>
-    <version>1.0.4</version>
+    <id>Seq.App.Ducksboard.Maps</id>
+    <version>1.0.0</version>
     <authors>Stayhard</authors>
     <owners>Stayhard</owners>
     <licenseUrl>http://opensource.org/licenses/MIT</licenseUrl>
     <projectUrl>https://github.com/stayhard/Seq.App.Ducksboard</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>The Ducksboard app for Seq (http://getseq.net) pushes data from Seq into Ducksboard (http://ducksboard.com).</description>
-    <releaseNotes>Value can now be a decimal.</releaseNotes>
+    <description>The Ducksboard.Maps app for Seq (http://getseq.net) pushes geographical data from Seq into Ducksboard (http://ducksboard.com).</description>
+    <releaseNotes></releaseNotes>
     <copyright>Copyright Stayhard AB 2014</copyright>
     <tags>seq-app seq serilog event ducksboard</tags>
     <dependencies>
@@ -19,8 +19,8 @@
   <files>
     <file src="bin\Debug\Seq.App.Ducksboard.dll" target="lib\net45" />
     <file src="bin\Debug\Seq.App.Ducksboard.pdb" target="lib\net45" />
-    <file src="bin\Debug\Seq.App.Ducksboard.Numbers.dll" target="lib\net45" />
-    <file src="bin\Debug\Seq.App.Ducksboard.Numbers.pdb" target="lib\net45" />
+    <file src="bin\Debug\Seq.App.Ducksboard.Maps.dll" target="lib\net45" />
+    <file src="bin\Debug\Seq.App.Ducksboard.Maps.pdb" target="lib\net45" />
     <file src="bin\Debug\Newtonsoft.Json.dll" target="lib\net45" />
     <file src="bin\Debug\System.Net.Http.Formatting.dll" target="lib\net45" />
   </files>

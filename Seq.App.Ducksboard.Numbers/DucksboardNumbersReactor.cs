@@ -1,6 +1,5 @@
 ﻿using System;
 using Seq.App.Ducksboard;
-using Seq.App.Ducksboard.Numbers;
 using Seq.Apps;
 using Seq.Apps.LogEvents;
 
@@ -8,18 +7,8 @@ namespace Seq.App.HipChat
 {
     [SeqApp("Ducksboard Numbers",
     Description = "Sends numeric data to Ducksboard.")]
-    public class DucksboardNumbers : Reactor, ISubscribeTo<LogEventData>
+    public class DucksboardNumbers : DucksboardBaseReactor, ISubscribeTo<LogEventData>
     {
-
-        [SeqAppSetting(
-            DisplayName = "API Key")]
-        public string ApiKey { get; set; }
-
-        [SeqAppSetting(
-            DisplayName = "Data Source Label",
-            HelpText = "Get this from widget preferences.")]
-        public string DataLabel { get; set; }
-
         [SeqAppSetting(
             DisplayName = "Value as delta",
             HelpText = "Whether or not the value should be regarded as a delta, that is, incrementing the existing value in Ducksboard. Do not process old events while updating with delta values.")]
@@ -32,7 +21,7 @@ namespace Seq.App.HipChat
         
         public async void On(Event<LogEventData> evt)
         {
-            var value = ValueGetter.GetValue(Log, Value, evt.Data);
+            var value = ValueGetter.GetDecimal(Log, Value, evt.Data);
             if (value == null)
             {
                 return;
