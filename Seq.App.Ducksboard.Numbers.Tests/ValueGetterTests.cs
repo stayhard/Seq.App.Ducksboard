@@ -14,20 +14,62 @@ namespace Seq.App.Ducksboard.Numbers.Tests
     {
 
         [Fact]
-        public void GetValue_IntegerAsString_ReturnInteger()
+        public void GetValue_IntegerAsString_ReturnDecimal()
         {
-            Assert.Equal(123, ValueGetter.GetValue(new LoggerConfiguration().CreateLogger(), "123", new LogEventData()));
+            Assert.Equal(123m, ValueGetter.GetValue(new LoggerConfiguration().CreateLogger(), "123", new LogEventData()));
+        }
+
+        [Fact]
+        public void GetValue_DecimalAsString_ReturnDecimal()
+        {
+            Assert.Equal(123.123m, ValueGetter.GetValue(new LoggerConfiguration().CreateLogger(), "123.123", new LogEventData()));
         }
 
         [Fact]
         public void GetValue_EventPropertyTimeSpan_ReturnMilliseconds()
         {
-            Assert.Equal(123, ValueGetter.GetValue(new LoggerConfiguration().CreateLogger(), "Elapsed", new LogEventData
+            Assert.Equal(123m, ValueGetter.GetValue(new LoggerConfiguration().CreateLogger(), "Elapsed", new LogEventData
             {
                 Properties = new Dictionary<string, object>
             {
                 {"Elapsed", new TimeSpan(0, 0, 0, 0, 123)}
             }}));
+        }
+
+        [Fact]
+        public void GetValue_EventPropertyInteger_ReturnDecimal()
+        {
+            Assert.Equal(123m, ValueGetter.GetValue(new LoggerConfiguration().CreateLogger(), "SomeProp", new LogEventData
+            {
+                Properties = new Dictionary<string, object>
+            {
+                {"SomeProp", 123}
+            }
+            }));
+        }
+
+        [Fact]
+        public void GetValue_EventPropertyDecimal_ReturnDecimal()
+        {
+            Assert.Equal(123.123m, ValueGetter.GetValue(new LoggerConfiguration().CreateLogger(), "SomeProp", new LogEventData
+            {
+                Properties = new Dictionary<string, object>
+            {
+                {"SomeProp", 123.123m}
+            }
+            }));
+        }
+
+        [Fact]
+        public void GetValue_EventPropertyDouble_ReturnDecimal()
+        {
+            Assert.Equal(123.123m, ValueGetter.GetValue(new LoggerConfiguration().CreateLogger(), "SomeProp", new LogEventData
+            {
+                Properties = new Dictionary<string, object>
+            {
+                {"SomeProp", 123.123d}
+            }
+            }));
         }
 
         [Fact]

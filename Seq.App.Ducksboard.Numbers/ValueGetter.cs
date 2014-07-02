@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,10 +12,10 @@ namespace Seq.App.Ducksboard.Numbers
     public static class ValueGetter
     {
 
-        public static int? GetValue(ILogger logger, string value, LogEventData eventData)
+        public static decimal? GetValue(ILogger logger, string value, LogEventData eventData)
         {
-            int result;
-            if (!int.TryParse(value, out result))
+            decimal result;
+            if (!decimal.TryParse(value, NumberStyles.Float, CultureInfo.GetCultureInfo("en-us"), out result))
             {
                 if (eventData.Properties.ContainsKey(value))
                 {
@@ -27,7 +28,7 @@ namespace Seq.App.Ducksboard.Numbers
                     {
                         try
                         {
-                            result = Convert.ToInt32(p);
+                            result = Convert.ToDecimal(p);
                         }
                         catch (FormatException)
                         {

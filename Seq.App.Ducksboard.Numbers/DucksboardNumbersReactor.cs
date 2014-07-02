@@ -26,10 +26,10 @@ namespace Seq.App.HipChat
         public bool IsDelta { get; set; }
 
         [SeqAppSetting(
-            HelpText = "A static integer value or an event property.",
+            HelpText = "A static decimal (use dot as decimal point) value or an event property.",
             IsOptional = false)]
         public string Value { get; set; }
-
+        
         public async void On(Event<LogEventData> evt)
         {
             var value = ValueGetter.GetValue(Log, Value, evt.Data);
@@ -44,8 +44,7 @@ namespace Seq.App.HipChat
             {
                 data = new
                 {
-                    delta = value,
-                    timestamp
+                    delta = value
                 };
             }
             else
